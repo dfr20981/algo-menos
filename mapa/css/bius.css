@@ -1,0 +1,55 @@
+#map {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.izquierda {
+    width: 27%;
+    height: 100vh;
+}
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.derecha {
+    width: 73%;
+    height: 100vh;
+}
+
+.estnav {
+    background-color: #f9a50c;
+}
+
+.colores {
+    color: #f9a50c;
+    color: #f4e3bf;
+    color: #583e11;
+    color: #776b53;
+    color: #f4d47c;
+    color: #ed6801;
+    color: #ff9b21;
+    color: #f4a22b;
+}
+
+.estboton {
+    background-color: #ed6801;
+}
+
+.imgRedonda {
+    width: 40px;
+    height: 40px;
+    border-radius: 150px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-right: 7px;
+}
+
+.negrita {
+    color: black;
+}
