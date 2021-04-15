@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="Views/css/prueba.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+  <script src="Views/js/dashboard.js"></script>
+  <script src="Views/js/graficas.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-1">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <!--Apunta a primer tienda-->
+            <a class="nav-link active navUno" id="v-pills-home-tabDE" data-toggle="pill" href="#v-pills-homeDE"
+              role="tab" aria-controls="v-pills-homeDE" aria-selected="true">Tienda1</a>
+            <!-- <a class="nav-link navUno" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Tienda2</a>
+                <a class="nav-link navUno" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Tienda3</a>
+                <a class="nav-link navUno" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Tienda4</a>-->
+          </div>
+        </div>
+        <div class="col-11">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <!--Primer tab-->
+                      <div class="tab-pane fade show active" id="v-pills-homeDE" role="tabpanel"
+                        aria-labelledby="v-pills-home-tabDE">
+                        <nav class="navbar navbar-light sticky-top bg-dark flex-md-nowrap p-0 shadow">
+                          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
+                            <h1><img src="Views/img/home.png">&nbsp&nbspALGO +
+                            </h1>
+                          </a>
+                          <button type="button" class="btn btn-warning btn-add" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Agregar sucursal
+                          </button>
+                          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
+                            data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <ul class="navbar-nav px-3">
+                            <li class="nav-item text-nowrap">
+                              <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!--Menu lateral-->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="menu-lateral">
+                              <div class="col-3 my-5">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                  aria-orientation="vertical">
+                                  <a class="nav-link active my-3" id="v-pills-home-tabME" data-toggle="pill"
+                                    href="#v-pills-homeME" role="tab" aria-controls="v-pills-homeME"
+                                    aria-selected="true"><img src="Views/img/casita.png" alt="" width="20px" height="20px">&nbsp&nbspInicio</a>
+                                  <a class="nav-link my-3" id="v-pills-profile-tab" data-toggle="pill"
+                                    href="#v-pills-profileME" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false"><img src="Views/img/caja.png" alt="" width="20px" height="20px">Productos</a>
+                                  <a class="nav-link my-3" id="v-pills-messages-tabME" data-toggle="pill"
+                                    href="#v-pills-messagesME" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false"><span data-feather="truck"><img src="Views/img/bicicleta.png" alt="" width="20px" height="20px"></span>Pedidos</a>
+                                  <a class="nav-link my-3" id="v-pills-settings-tabME" data-toggle="pill"
+                                    href="#v-pills-settingsME" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="settings"><img src="Views/img/tuerca.png" alt="" width="20px" height="20px"></span>Ajustes</a>
+                                  <a class="nav-link mt-3 mb-0" id="v-pills-contact-tabME" data-toggle="pill"
+                                    href="#v-pills-contactME" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="home"><img src="Views/img/flecha.png" alt="" width="20px" height="20px"></span>Visitar&nbspTienda</a>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="tab-content d-flex justify-content-center mt-5" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-homeME" role="tabpanel"
+                                  aria-labelledby="v-pills-home-tab">
+                                  <!--Grafica de prueba-->
+                                  <div class="d-flex">
+                                    <div class="mr-5">
+                                  <h3>Ventas Anuales</h3>
+                                  <canvas id="myChart" width="350" height="450"></canvas>
+                                  <script>
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                      type: 'bar',
+                                      data: {
+                                        labels: ['Ene', 'Feb', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                                        datasets: [{
+                                          label: '# of Votes',
+                                          data: [12, 17, 3, 5, 2, 3],
+                                          backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(54, 162, 235, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(153, 102, 255, 0.2)',
+                                            'rgba(255, 159, 64, 0.2)'
+                                          ],
+                                          borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                          ],
+                                          borderWidth: 1
+                                        }]
+                                      },
+                                      options: {
+                                        scales: {
+                                          y: {
+                                            beginAtZero: true
+                                          }
+                                        }
+                                      }
+                                    });
+                                  </script>
+                                </div>
+                                  <div>
+                                    <h3>Ventas mensuales</h3>
+                                  <canvas id="myChart2" width="350" height="500"></canvas>
+                                  <script>
+                                    var ctx2 = document.getElementById('myChart2').getContext('2d');
+                                    var myChart2 = new Chart(ctx2, {
+                                      type: 'pie',
+                                      data: {
+                                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                        datasets: [{
+                                          label: 'Votes',
+                                          data: [12, 19, 3, 5, 2, 3],
+                                          backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(54, 162, 235, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(153, 102, 255, 0.2)',
+                                            'rgba(255, 159, 64, 0.2)'
+                                          ],
+                                          borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                          ],
+                                          borderWidth: 1
+                                        }]
+                                      },
+                                      options: {
+                                        scales: {
+                                          y: {
+                                            beginAtZero: true
+                                          }
+                                        }
+                                      }
+                                    });
+                                  </script>
+                                </div>
+                                </div>
+                                  <!--<canvas id="myChart2" width="500" height="500"></canvas>
+                                  <script>
+                                    var ctx2 = document.getElementById('myChart2').getContext('2d');
+                                    var myChart2 = new Chart(ctx2, {
+                                      type: 'pie',
+                                      data: {
+                                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                        datasets: [{
+                                          label: 'Votes',
+                                          data: [12, 19, 3, 5, 2, 3],
+                                          backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(54, 162, 235, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(153, 102, 255, 0.2)',
+                                            'rgba(255, 159, 64, 0.2)'
+                                          ],
+                                          borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                          ],
+                                          borderWidth: 1
+                                        }]
+                                      },
+                                      options: {
+                                        scales: {
+                                          y: {
+                                            beginAtZero: true
+                                          }
+                                        }
+                                      }
+                                    });
+                                  </script>-->
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profileME" role="tabpanel"
+                                  aria-labelledby="v-pills-profile-tab">
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messagesME" role="tabpanel"
+                                  aria-labelledby="v-pills-messages-tab">Tres</div>
+                                <div class="tab-pane fade" id="v-pills-settingsME" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">Cuatro</div>
+                                <div class="tab-pane fade" id="v-pills-contactME" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">5</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Segundo tab-->
+                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <nav class="navbar navbar-light sticky-top bg-dark flex-md-nowrap p-0 shadow">
+                          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
+                            <h1><img src="Views/img/home.png">&nbsp&nbspALGO +
+                            </h1>
+                          </a>
+                          <button type="button" class="btn btn-warning btn-add" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Agregar sucursal
+                          </button>
+                          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
+                            data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <ul class="navbar-nav px-3">
+                            <li class="nav-item text-nowrap">
+                              <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!--Menu lateral-->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="menu-lateral">
+                              <div class="col-3 my-5">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                  aria-orientation="vertical">
+                                  <a class="nav-link active my-3" id="v-pills-home-tabME" data-toggle="pill"
+                                    href="#v-pills-homeME2" role="tab" aria-controls="v-pills-homeME"
+                                    aria-selected="true"><span data-feather="layers"></span>Inicio</a>
+                                  <a class="nav-link my-3" id="v-pills-profile-tab" data-toggle="pill"
+                                    href="#v-pills-profileME2" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false"><span data-feather="shopping-cart"></span>Productos</a>
+                                  <a class="nav-link my-3" id="v-pills-messages-tabME" data-toggle="pill"
+                                    href="#v-pills-messagesME2" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false"><span data-feather="truck"></span>Pedidos</a>
+                                  <a class="nav-link my-3" id="v-pills-settings-tabME" data-toggle="pill"
+                                    href="#v-pills-settingsME2" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="settings"></span>Ajustes</a>
+                                  <a class="nav-link my-3" id="v-pills-contact-tabME" data-toggle="pill"
+                                    href="#v-pills-contactME2" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="home"></span>Visitar&nbspTienda</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="tab-content d-flex justify-content-center mt-5" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-homeME2" role="tabpanel"
+                                  aria-labelledby="v-pills-home-tab">Holi</div>
+                                <div class="tab-pane fade" id="v-pills-profileME2" role="tabpanel"
+                                  aria-labelledby="v-pills-profile-tab">7</div>
+                                <div class="tab-pane fade" id="v-pills-messagesME2" role="tabpanel"
+                                  aria-labelledby="v-pills-messages-tab">8</div>
+                                <div class="tab-pane fade" id="v-pills-settingsME2" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">9</div>
+                                <div class="tab-pane fade" id="v-pills-contactME2" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">10</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Tercer tab-->
+                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <nav class="navbar navbar-light sticky-top bg-dark flex-md-nowrap p-0 shadow">
+                          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
+                            <h1><img src="Views/img/home.png">&nbsp&nbspALGO +
+                            </h1>
+                          </a>
+                          <button type="button" class="btn btn-warning btn-add" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Agregar sucursal
+                          </button>
+                          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
+                            data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <ul class="navbar-nav px-3">
+                            <li class="nav-item text-nowrap">
+                              <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!--menu lateral-->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="menu-lateral">
+                              <div class="col-3 my-5">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                  aria-orientation="vertical">
+                                  <a class="nav-link active my-3" id="v-pills-home-tabME" data-toggle="pill"
+                                    href="#v-pills-homeME3" role="tab" aria-controls="v-pills-homeME"
+                                    aria-selected="true"><span data-feather="layers"></span>Inicio</a>
+                                  <a class="nav-link my-3" id="v-pills-profile-tab" data-toggle="pill"
+                                    href="#v-pills-profileME3" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false"><span data-feather="shopping-cart"></span>Productos</a>
+                                  <a class="nav-link my-3" id="v-pills-messages-tabME" data-toggle="pill"
+                                    href="#v-pills-messagesME3" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false"><span data-feather="truck"></span>Pedidos</a>
+                                  <a class="nav-link my-3" id="v-pills-settings-tabME" data-toggle="pill"
+                                    href="#v-pills-settingsME3" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="settings"></span>Ajustes</a>
+                                  <a class="nav-link my-3" id="v-pills-contact-tabME" data-toggle="pill"
+                                    href="#v-pills-contactME3" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="home"></span>Visitar&nbspTienda</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="tab-content d-flex justify-content-center mt-5" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-homeME3" role="tabpanel"
+                                  aria-labelledby="v-pills-home-tab">11</div>
+                                <div class="tab-pane fade" id="v-pills-profileME3" role="tabpanel"
+                                  aria-labelledby="v-pills-profile-tab">12</div>
+                                <div class="tab-pane fade" id="v-pills-messagesME3" role="tabpanel"
+                                  aria-labelledby="v-pills-messages-tab">13</div>
+                                <div class="tab-pane fade" id="v-pills-settingsME3" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">14</div>
+                                <div class="tab-pane fade" id="v-pills-contactME3" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">15</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Cuarto tab-->
+                      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">
+                        <nav class="navbar navbar-light sticky-top bg-dark flex-md-nowrap p-0 shadow">
+                          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
+                            <h1><img src="Views/img/home.png">&nbsp&nbspALGO +
+                            </h1>
+                          </a>
+                          <button type="button" class="btn btn-warning btn-add" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Agregar sucursal
+                          </button>
+                          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
+                            data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <ul class="navbar-nav px-3">
+                            <li class="nav-item text-nowrap">
+                              <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="menu-lateral">
+                              <div class="col-3 my-5">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                  aria-orientation="vertical">
+                                  <a class="nav-link active colmouse" id="v-pills-home-tabME" data-toggle="pill"
+                                    href="#v-pills-homeME4" role="tab" aria-controls="v-pills-homeME"
+                                    aria-selected="true"><span data-feather="layers"></span>Inicio</a>
+                                  <a class="nav-link my-3" id="v-pills-profile-tab" data-toggle="pill"
+                                    href="#v-pills-profileME4" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false"><span data-feather="shopping-cart"></span>Productos</a>
+                                  <a class="nav-link my-3" id="v-pills-messages-tabME" data-toggle="pill"
+                                    href="#v-pills-messagesME4" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false"><span data-feather="truck"></span>Pedidos</a>
+                                  <a class="nav-link my-3" id="v-pills-settings-tabME" data-toggle="pill"
+                                    href="#v-pills-settingsME4" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="settings"></span>Ajustes</a>
+                                  <a class="nav-link my-3" id="v-pills-contact-tabME" data-toggle="pill"
+                                    href="#v-pills-contactME4" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"><span data-feather="home"></span>Visitar&nbspTienda</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="tab-content d-flex justify-content-center mt-5" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-homeME4" role="tabpanel"
+                                  aria-labelledby="v-pills-home-tab">16</div>
+                                <div class="tab-pane fade" id="v-pills-profileME4" role="tabpanel"
+                                  aria-labelledby="v-pills-profile-tab">17</div>
+                                <div class="tab-pane fade" id="v-pills-messagesME4" role="tabpanel"
+                                  aria-labelledby="v-pills-messages-tab">18</div>
+                                <div class="tab-pane fade" id="v-pills-settingsME4" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">19</div>
+                                <div class="tab-pane fade" id="v-pills-contactME4" role="tabpanel"
+                                  aria-labelledby="v-pills-settings-tab">20</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--finde paneles-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--   <div class="tab-pane fade show active" id="v-pills-home-tabME" role="tabpanel" aria-labelledby="v-pills-home-tabME">tab1</div>
+  
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Inicio de modales-->
+
+    <div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--titulo-->
+          <div class="modal-header fondo-modal">
+            <h5 class="modal-title" id="exampleModalLabel">Agregar nueva sucursal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <!--Opciones de tabs-->
+              <div class="d-flex justify-content-center">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item m-3" role="presentation">
+                    <a class="nav-link active mb-3 numerosa" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                      aria-controls="home" aria-selected="true">1</a>
+                  </li>
+                  <li class="nav-item m-3" role="presentation">
+                    <a class="nav-link numerosa" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                      aria-controls="profile" aria-selected="false">2</a>
+                  </li>
+                  <li class="nav-item m-3" role="presentation">
+                    <a class="nav-link numerosa" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                      aria-controls="contact" aria-selected="false">3</a>
+                  </li>
+                  <li class="nav-item m-3" role="presentation">
+                    <a class="nav-link numerosa" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab"
+                      aria-controls="contact" aria-selected="false">4</a>
+                  </li>
+                  <li class="nav-item m-3" role="presentation">
+                    <a class="nav-link numerosa" id="contact-tab3" data-toggle="tab" href="#contact3" role="tab"
+                      aria-controls="contact" aria-selected="false">5</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Contenido de las tabs-->
+              <div class="tab-content" id="myTabContent">
+                <!--Parte del Modal 1-->
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="m-3">
+                    <h5>Datos de tienda</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="negocio" placeholder="Nombre de negocio">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="nom" required
+                          placeholder="Nombre de encargado">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="apellido" required
+                          placeholder="Apellidos de encargado">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="telefono" required
+                          placeholder="Telefono de negocio">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-end m-3">
+                    <a href="#profile-tab" class="btn btn-warning tam-boton" id="bm2" onclick="atab2()">Siguiente</a>
+                  </div>
+                </div>
+
+
+                <!--Parte del Modal 2-->
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                  <div class="m-3">
+                    <h5>Datos personales</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="razon_social" placeholder="Razon social">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="rfc" required placeholder="RFC">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="curp" required placeholder="CURP">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="date" class="form-control form-style" id="nacimiento" required
+                          placeholder="Fecha de nacimiento">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-center m-3">
+                    <a href="#profile-tab" class="btn tamc-boton mr-auto" id="bm2" onclick="rtab1()">Regresar</a>
+                    <a href="#contact-tab" class="btn btn-warning tam-boton ml-auto" onclick="atab3()">Siguiente</a>
+                  </div>
+
+                </div>
+                <!--Parte del Modal 3-->
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                  <div class="m-3">
+                    <h5>Detalles de la tienda</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="calle" placeholder="Calle">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="num_int" required
+                          placeholder="Número interior">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="num_ext" required
+                          placeholder="Número exterior">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="col" required placeholder="Colonia">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-center m-3">
+                    <a href="#profile-tab" class="btn tamc-boton mr-auto" id="bm2" onclick="rtab2()">Regresar</a>
+                    <a href="#contact-tab2" class="btn btn-warning tam-boton ml-auto" onclick="atab4()">Siguiente</a>
+                  </div>
+
+                </div>
+                <!--Parte del Modal 4-->
+                <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab">
+
+                  <div class="m-3">
+                    <h5>Detalles de la tienda</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="ciudad" required placeholder="Ciudad">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="estado" placeholder="Estado">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="pais" required placeholder="País">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="cp" required placeholder="Código postal">
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center m-3">
+                      <a href="#profile-tab" class="btn tamc-boton mr-auto" id="bm2" onclick="rtab3()">Regresar</a>
+                      <a href="#contact-tab2" class="btn btn-warning tam-boton ml-auto" onclick="atab5()">Siguiente</a>
+                    </div>
+                  </form>
+
+                </div>
+                <!--Parte del Modal 5-->
+                <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab">
+
+                  <div class="m-3">
+                    <h5>Detalles de la tienda</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="fachada" required
+                          placeholder="Color de fachada">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control form-style" id="entre" required
+                          placeholder="Entre que calles se encuentra">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-12 mb-3">
+                        <select class="form-control form-style" id="nombre" placeholder="Categoría">
+                          <option>Panaderia</option>
+                          <option>Abarrotes</option>
+                          <option>Carniceria</option>
+                          <option>Tortilleria</option>
+                          <option>Verdularia</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center m-3">
+                      <a href="#profile-tab" class="btn tamc-boton mr-auto" id="bm2" onclick="rtab4()">Regresar</a>
+                      <a type="button" onclick="count_click_add()" class="btn btn-warning tam-boton ml-auto"
+                        data-dismiss="modal">Agregar tienda</a>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

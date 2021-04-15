@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+  background-color: #ffa600;
+
+
+
+}
+
+.alert.alert-warning{
+  color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor:pointer;"
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+section {
+
+ position: relative ;
+ min-height: 100vh;
+ /*background-color: #ffa600;*/
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 20px;
+ touch-action: none;
+
+
+}
+
+section .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+section .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+section .container .user .imgBx {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffa600;
+  transition: 0.5s;
+}
+
+section .container .user .imgBx img {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  top: 15%;
+  left: 15%;*/
+  background-repeat: no-repeat, center center fixed;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+section .container .user .formBx {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+section .container .user .formBx form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+#title{
+  font-size:28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+#submitIni{
+  max-width: 100%;
+  background: #ffa600 !important;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+
+}
+
+section .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+section .container .user .formBx form input[type='submit'] {
+  max-width: 100%;
+  background: #ffa600;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+
+section .container .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  /*text-transform: uppercase;*/
+  font-weight: 300;
+}
+
+section .container .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+section .container .signupBx {
+  pointer-events: none;
+}
+
+section .container.active .signupBx {
+  pointer-events: initial;
+}
+
+section .container .signupBx .formBx {
+  left: 100%;
+}
+
+section .container.active .signupBx .formBx {
+  left: 0;
+}
+
+section .container .signupBx .imgBx {
+  left: -100%;
+}
+
+section .container.active .signupBx .imgBx {
+  left: 0%;
+}
+
+section .container .signinBx .formBx {
+  left: 0%;
+}
+
+section .container.active .signinBx .formBx {
+  left: 100%;
+}
+
+section .container .signinBx .imgBx {
+  left: 0%;
+}
+
+section .container.active .signinBx .imgBx {
+  left: -100%;
+}
+@media (max-width: 991px) {
+  section .container {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: -15%;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    touch-action: none;
+
+
+
+  }
+section .container .user .formBx {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 40px;
+    transition: 0.5s;
+}
+#indp8{
+    background-color: #ffa600  !important;
+
+}
+.btnfile{
+      background-color: #ffa600  !important;
+
+}
+@media (max-width: 991px) {
+  #title{
+    font-size: 48px !important;
+    font-weight: 600;
+    /*text-transform: uppercase;*/
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #555;
+    margin-top: 15px;
+    margin-left: 15%;
+  }
+
+  
+  
+  }
+   
+  section .container .imgBx {
+    display: none;
+  }
+
+  section .container .user .formBx {
+    width: auto;
+  }
+  section .container .user .formBx form .signup {
+    position: relative;
+    margin-top: 50px;
+    margin-right: 100px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #555;
+    /*text-transform: uppercase;*/
+    font-weight: 300;
+    overflow-y: hidden;
+
+
+  }
+  section .container .user .formBx form h2 {
+    font-size: 58px;
+    font-weight: 600;
+    /*text-transform: uppercase;*/
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #555;
+    margin-top: 15px;
+  }
+  
+  section .container .user .formBx form input {
+    position: relative;
+    width: 100% !important;
+    height: 100px;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 28px 0;
+    font-size: 34px;
+    letter-spacing: 1px;
+    font-weight: 300;
+        overflow: visible !important;
+
+  }
+  section .container .user .formBx form input[type='submit'] {
+    max-width: 100%;
+    background: #ffa600;
+    color: #fff;
+    cursor: pointer;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    text-align: center;
+  }
+  #imgAlgo{
+    width: 240px;
+    height: 240px;
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat, center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:block;
+    margin:auto;
+    margin-top: 10px;
+    margin-right: 15%;
+  }
+  #imgAlgo1{
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat, center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:block;
+    margin:auto;
+    margin-top: -50px;
+  }
+  .g-signin2{
+  width: 100% !important;
+  height: 80px !important;
+}
+.abcRioButtonContentWrapper {
+    width: 100% !important;
+     height: 80px !important;
+    }
+
+    .abcRioButtonLightBlue {
+    background-color: #fff;
+    color: #757575;
+     width: 100% !important;
+      height:80px !important;
+}
+.abcRioButtonContents{
+        font-size: 34px !important;
+        line-height: 84px !important;
+
+
+}
+.abcRioButtonSvg{
+    width: 60px !important;
+    height: 60px !important;
+}
+
+}
+
+/*responsive////////////////////////////////////////////////////////*/
+
+.g-signin2{
+  width: 100% !important;
+}
+.abcRioButtonContentWrapper {
+    width: 100% !important;
+    }
+
+    .abcRioButtonLightBlue {
+    background-color: #fff;
+    color: #757575;
+     width: 100% !important;
+}
+.col-md-6 input{
+  width: 50% !important;
+}
+
+
+  .container1{
+  width: 600px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  /*padding: 50px 35px 10px 35px;*/
+}
+.container1 header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container1 .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .container1 .form-outer {
+    width: 100%;
+    overflow: visible !important;
+}
+ 
+  }
+.container1 .form-outer form{
+  display: flex;
+  width: 500%;
+}
+.form-outer form .page{
+  width: 30%;
+
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 80%;
+  height: 45px;
+  margin: 25px 0;
+  display: flex;
+  position: relative;
+}
+.form-outer form .page .field1{
+  width: 90%;
+  height: 45px;
+  margin: 25px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+@media (max-width: 991px) {
+ .form-outer form .page .field1{
+  width: 100%;
+  height: 45px;
+  margin: 25px 0;
+  display: block !important;
+  position: relative;
+} 
+.container1 .form-outer form {
+    display: flex;
+    width: 600%;
+} 
+  } 
+form .page .field input{
+  height: 100%;
+  width: 80%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+
+}
+#indp{
+    width: 600px !important;
+
+}
+#indp1{
+    width: 90% !important;
+
+}
+#indp2{
+  width: 100% !important;
+    /*width: 80% !important;*/
+    margin-left: 5px !important;
+
+}
+@media (max-width: 991px) {
+  #indp2 {
+    width: 100% !important;
+    margin-left: 5px !important;
+    overflow: visible !important;
+}
+#indp {
+   
+    overflow: visible !important;
+        width: 1000px !important;
+
+}
+#indp8{
+    width: 800px !important;
+
+}
+  #indp7{
+    width: 800px !important;
+
+}
+  
+  }
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 40%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #ffa600;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+form .page .btns button{
+  margin-top: 20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+/*form .page .btns button.next-id{
+  
+  background-color: black;
+}*/
+
+.container1 .progress-bar{
+  display: flex;
+  margin: 30px 0;
+  user-select: none;
+}
+.container1 .progress-bar .step{
+  position: relative;
+  text-align: justify;
+  width: 20%;
+}
+.container1 .progress-bar .step p{
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+.progress-bar .step p.active{
+  color: white;
+}
+.progress-bar .step .bullet{
+  height: 30px;
+  width: 30px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+@media (max-width: 991px) {
+  .progress-bar .step .bullet{
+    height: 60px;
+  width: 60px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 37px;
+  line-height: 25px;
+  }
+  
+  form .page .btns button {
+    margin-top: 80px !important;
+}
+form .page .field button {
+    width: 46%;
+    height:90px;
+    border: none;
+    background: #ffa600;
+    /*margin-top: -25px;*/
+    margin-bottom: 10px !important;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 27px;
+}
+form .page .btns button.next {
+    margin-right: 3px;
+    font-size: 27px;
+}
+form .page .btns button.next-id {
+    margin-right: 3px;
+    font-size: 27px;
+}
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+}
+.container1 .progress-bar .step p {
+    font-size: 28px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+.container1 .progress-bar .step {
+    position: relative;
+    text-align: justify;
+    width: 30%;
+}
+.form-outer form .page .field {
+    width: 80%;
+    height: auto;
+    margin: 25px 0;
+    display: flex;
+    position: relative;
+        overflow: visible !important;
+
+}
+  
+  }
+.progress-bar .step .bullet.active{
+  border-color: #ffa600;
+  background: #ffa600;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #ffa600;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #ffa600;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+
